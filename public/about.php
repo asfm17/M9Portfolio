@@ -28,8 +28,8 @@
   </nav>
   <main>
     <h2>About Me</h2>
-    <h3>Name: Akira San Felipe Maestre</h3>
-    <h3>Date of Birth: 22-08-2006</h3>
+    <h3 id="name">Name: Akira San Felipe Maestre</h3>
+    <h3 id="date">Date of Birth: 22-08-2006</h3>
   </main>
   <script>
     function randomizeStars() {
@@ -72,11 +72,13 @@
         const t = dict[lang]; if(!t) return;
         const navLinks = document.querySelectorAll('nav a');
         navLinks[0] && (navLinks[0].textContent = t['nav.home']);
-        navLinks[1] && (navLinks[1].textContent = t['nav.projects']);
+        navLinks[1] && (navLinks[1].textContent = t['nav.projects']); 
         navLinks[2] && (navLinks[2].textContent = t['nav.cv']);
         navLinks[3] && (navLinks[3].textContent = t['nav.about']);
         navLinks[4] && (navLinks[4].textContent = t['nav.contact']);
         const h2 = document.querySelector('main h2'); if(h2) h2.textContent = t['page.title'];
+        const name = document.querySelector('#name'); if(name) name.textContent = t['name'];
+        const date = document.querySelector('#date'); if(date) date.textContent = t['date'];
       }
       const savedLang = localStorage.getItem('lang') || 'en';
       applyLang(savedLang);

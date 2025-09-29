@@ -44,9 +44,9 @@
   <!-- Placeholder projects in 3-column grid -->
   <h2 class="projects-title">Top Projects</h2>
   <section class="projects-grid">
-    <article class="card"><h3>Scope Mania Webshop</h3><img class="card-img" src="img/webshop1.webp" alt="Scope Mania Webshop" loading="lazy"><p>September 2024</p></article>
-    <article class="card"><h3>Project 2</h3><p>Coming soon...</p></article>
-    <article class="card"><h3>Project 3</h3><p>Coming soon...</p></article>
+    <article class="card"><h3>Scope Mania Webshop</h3> <p>November 2024</p> <img class="card-img" src="img/webshop1.webp" alt="Scope Mania Webshop" loading="lazy"></img></article>
+    <article class="card"><h3>Dot Collector Game</h3> <p>June 2025</p> <img class="card-img" src="img/dotcollector.webp" alt="Dot Collector Game" loading="lazy"></img></article>
+    <article class="card"><h3>SV Unity Website</h3><p>September 2024</p><img class="card-img" src="img/sv-unity.webp" alt="SV Unity Website" loading="lazy"></img></article>
   </section>
  <script>
     function randomizeStars() {
@@ -88,24 +88,24 @@
           'nav.projects': 'Projects',
           'nav.cv': 'CV',
           'nav.about': 'About Me',
+          'name': 'Name: Akira San Felipe Maestre',
+          'date': 'Date of Birth: 22-08-2006',
           'nav.contact': 'Contact',
           'skills.title': 'Skills',
           'projects.title': 'Top Projects',
-          'project1.title': 'Scope Mania Webshop',
-          'project1.date': 'September 2024',
-          'projectX.soon': 'Coming soon...'
+          'project1.title': 'Scope Mania Webshop'
         },
         nl: {
           'nav.home': 'Home',
           'nav.projects': 'Projecten',
           'nav.cv': 'CV',
           'nav.about': 'Over mij',
+          'name': 'Naam: Akira San Felipe Maestre',
+          'date': 'Geboortedatum: 22-08-2006',
           'nav.contact': 'Contact',
           'skills.title': 'Vaardigheden',
           'projects.title': 'Top Projecten',
           'project1.title': 'Scope Mania Webshop',
-          'project1.date': 'September 2024',
-          'projectX.soon': 'Binnenkort...'
         }
       };
       function applyLang(lang) {
@@ -130,10 +130,8 @@
           const h3 = firstCard.querySelector('h3');
           const p = firstCard.querySelector('p');
           if (h3) h3.textContent = t['project1.title'];
-          if (p) p.textContent = t['project1.date'];
         }
         // other cards soon text
-        document.querySelectorAll('.projects-grid .card:nth-child(n+2) p').forEach(p => p.textContent = t['projectX.soon']);
       }
       const savedLang = localStorage.getItem('lang') || 'en';
       applyLang(savedLang);
