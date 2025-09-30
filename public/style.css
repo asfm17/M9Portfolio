@@ -414,9 +414,121 @@ h3{
 @media (max-width: 980px) {
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 640px) {
   .projects-grid { grid-template-columns: 1fr; }
+  .projects-grid .card {
+    width: 98vw;
+    height: auto;
+    padding: 0.8rem;
+    margin: 0.5rem auto;
+  }
+  .projects-title {
+    font-size: 1.2rem;
+    margin: 3rem 0 1rem;
+  }
+}
+
+/* Responsive navigation */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.4rem 0;
+    font-size: 1rem;
+  }
+  nav a, nav button {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+  .theme-toggle, .lang-toggle {
+    top: 0.5rem;
+    right: 1rem;
+    height: 1.6rem;
+    min-width: 2.2rem;
+    font-size: 0.95rem;
+  }
+  .lang-toggle {
+    right: 4.2rem;
+  }
+}
+
+/* Responsive main container */
+@media (max-width: 700px) {
+  main {
+    max-width: 98vw;
+    margin: 1rem auto;
+    margin-top: 3.5rem;
+    padding: 1rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+}
+
+/* Responsive skillslist */
+@media (max-width: 700px) {
+  .skillslist {
+    max-width: 98vw;
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .skillslist ul {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+  .skills-title {
+    font-size: 1.3rem;
+    margin: 0.5rem 0 2rem;
+  }
+}
+
+/* Responsive name and skills section */
+@media (max-width: 900px) {
+  .nameandskills {
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-left: 0;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    align-items: flex-start;
+  }
+}
+
+/* Responsive profile image */
+@media (max-width: 700px) {
+  #pfp {
+    width: 10rem;
+    height: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Responsive blog/project items */
+@media (max-width: 700px) {
+  .blog-item {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .blog-title {
+    font-size: 1.2rem;
+  }
+  #webshop1 {
+    width: 100%;
+    max-width: 18rem;
+    height: auto;
+  }
+}
+
+/* Responsive stars background */
+@media (max-width: 700px) {
+  .stars {
+    inset: 0;
+  }
+  .star {
+    height: 70px;
+  }
 }
 
 
@@ -525,4 +637,5 @@ h3{
   .theme-toggle,
   .theme-toggle::after { transition: none; }
   .theme-toggle.toggling::after { }
+}
 }
