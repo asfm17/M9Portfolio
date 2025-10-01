@@ -44,9 +44,45 @@
   <!-- Placeholder projects in 3-column grid -->
   <h2 class="projects-title">Top Projects</h2>
   <section class="projects-grid">
-    <article class="card"><h3>Scope Mania Webshop</h3> <p>November 2024</p> <img class="card-img" src="img/webshop1.webp" alt="Scope Mania Webshop" loading="lazy"></img></article>
-    <article class="card"><h3>Dot Collector Game</h3> <p>June 2025</p> <img class="card-img" src="img/dotcollector.webp" alt="Dot Collector Game" loading="lazy"></img></article>
-    <article class="card"><h3>SV Unity Website</h3><p>September 2024</p><img class="card-img" src="img/sv-unity.webp" alt="SV Unity Website" loading="lazy"></img></article>
+    <article class="card">
+      <h3>Scope Mania Webshop</h3>
+      <p>November 2024</p>
+      <img class="card-img" src="img/webshop1.webp" alt="Scope Mania Webshop" loading="lazy">
+      <div class="card-btns">
+        <a class="github-btn" href="https://github.com/asfm17/BO-Webshop.git" target="_blank" rel="noopener">
+          <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy" />
+          Github
+        </a>
+        <button class="site-btn">
+          Site <span class="arrow">→</span>
+        </button>
+      </div>
+    </article>
+    <article class="card">
+      <h3>Dot Collector Game</h3>
+      <p>June 2025</p>
+      <img class="card-img" src="img/dotcollector.webp" alt="Dot Collector Game" loading="lazy">
+      <div class="card-btns">
+        <a class="github-btn" href="https://github.com/asfm17/M8-JSGAME.git" target="_blank" rel="noopener">
+          <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy" />
+          Github
+        </a>
+        <button class="site-btn">
+          Site <span class="arrow">→</span>
+        </button>
+      </div>
+    </article>
+    <article class="card">
+      <h3>My Portfolio</h3>
+      <p>October 2025</p>
+      <img class="card-img" src="img/myportfolio.webp" alt="My Portfolio" loading="lazy">
+      <div class="card-btns">
+        <a class="github-btn" href="https://github.com/asfm17/M9Portfolio.git" target="_blank" rel="noopener">
+          <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy" />
+          Github
+        </a>
+      </div>
+    </article>
   </section>
  <script>
     function randomizeStars() {

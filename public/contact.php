@@ -93,25 +93,5 @@
       }
     })();
   </script>
-  <script>
-    (function() {
-      const root = document.documentElement;
-      const btn = document.getElementById('themeToggle');
-      const getSystem = () => (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
-      const saved = localStorage.getItem('theme');
-      const initial = (saved === 'light' || saved === 'dark') ? saved : getSystem();
-      root.setAttribute('data-theme', initial);
-      if (btn) {
-        btn.type = 'button';
-        btn.addEventListener('click', function() {
-          btn.classList.add('toggling');
-          const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-          root.setAttribute('data-theme', next);
-          localStorage.setItem('theme', next);
-          setTimeout(() => btn.classList.remove('toggling'), 300);
-        });
-      }
-    })();
-  </script>
 </body>
 </html>
