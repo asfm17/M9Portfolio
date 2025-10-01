@@ -146,7 +146,7 @@ main {
   background-color: var(--card-bg);
   color: var(--text);
   max-width:18rem;
-  max-height:18rem;
+  max-height:19rem;
   border-radius:2rem;
   border-color: var(--border);
   border-style:solid;
@@ -199,7 +199,7 @@ main {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: fit-content;
   transition: transform 180ms ease, background-color 220ms ease, color 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
   box-shadow: 0 6px 14px var(--elev);
@@ -227,41 +227,66 @@ main {
   transform: translateY(0);
 }
 
-.skill-text { padding-right: 0; }
+.skill-text {
+  padding-right: 0.5rem;
+  color: inherit; /* Use normal text color */
+}
 
-.skill-logos { display: inline-flex; gap: 0.25rem; position: absolute; right: -2.2rem; top: 50%; transform: translateY(-50%); align-items: center; }
-.skillslist li:first-child .skill-logos { right: -5.3rem; gap: 0.12rem; }
+.skill-logos {
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
 
 .skill-logo {
-  position: absolute;
-  position: static;
   width: 2rem;
   height: 2rem;
   object-fit: contain;
   pointer-events: none;
   opacity: 1;
+  position: static;
+  vertical-align: middle;
 }
 
-/* Ensure specific logos scale slightly larger if their source assets appear smaller */
-.skill-logo[src*="logo2.webp"],
-.skill-logo[src*="logo4.webp"] {
-  width: 2.7rem;
-  height: 2.7rem;
-  transform: scale(1.08);
+/* Stars outside, behind the logos but not inside the text */
+.skill-stars {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: calc(100% + 0.3rem);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
 }
 
-/* Slightly increase logo2 size and nudge it left within the first row pair */
-.skill-logo[src*="logo2.webp"] { width: 3rem; height: 3rem; }
-.skillslist li:first-child .skill-logos .skill-logo[src*="logo2.webp"] { margin-left: -0.2rem; }
+.star-outside {
+  font-size: 1.1rem;
+  color: #fff !important; /* Default: white stars */
+  opacity: 0.95;
+  margin-right: 0.08em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.12);
+  user-select: none;
+}
 
-/* Nudge container a bit further for rows that might expand due to larger logos */
-.skillslist li:nth-child(1) .skill-logos { right: -5rem; }
-.skillslist li:nth-child(3) .skill-logos { right: -2.6rem; }
-/* Slightly move rows 4 (Git) and 5 (Docker) to the right */
-.skillslist li:nth-child(4) .skill-logos { right: -2.5rem; }
-.skillslist li:nth-child(5) .skill-logos { right: -2.5rem; }
+/* Make stars in skillslist black in light mode */
+[data-theme="light"] .skillslist .star-outside {
+  color: #111 !important;
+  opacity: 0.95;
+}
 
-/* Staggered fade-in for chips */
+/* Responsive: slightly smaller stars and better alignment on mobile */
+@media (max-width: 700px) {
+  .star-outside {
+    font-size: 1rem;
+  }
+  .skill-stars {
+    left: calc(100% + 0.1rem);
+  }
+}
+
 .skillslist li { opacity: 0; animation: chip-in 500ms ease forwards; }
 .skillslist li:nth-child(1) { animation-delay: 40ms; }
 .skillslist li:nth-child(2) { animation-delay: 80ms; }

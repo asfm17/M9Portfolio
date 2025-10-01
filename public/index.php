@@ -32,11 +32,60 @@
   <h2 class="skills-title">Skills</h2>
   <div class="skillslist">
     <ul>
-          <li><span class="skill-text">HTML/PHP</span><span class="skill-logos"><img class="skill-logo" src="img/logo1.webp" alt="HTML logo" loading="lazy" onerror="this.style.display='none'"><img class="skill-logo" src="img/logo2.webp" alt="PHP logo" loading="lazy" onerror="this.style.display='none'"></span></li>
-          <li><span class="skill-text">CSS</span><span class="skill-logos"><img class="skill-logo" src="img/logo3.webp" alt="CSS logo" loading="lazy" onerror="this.style.display='none'"></span></li>
-          <li><span class="skill-text">JavaScript</span><span class="skill-logos"><img class="skill-logo" src="img/logo4.webp" alt="JavaScript logo" loading="lazy" onerror="this.style.display='none'"></span></li>
-          <li><span class="skill-text">Git</span><span class="skill-logos"><img class="skill-logo" src="img/logo5.webp" alt="Git logo" loading="lazy" onerror="this.style.display='none'"></span></li>
-          <li><span class="skill-text">Docker Desktop</span><span class="skill-logos"><img class="skill-logo" src="img/logo6.webp" alt="Docker logo" loading="lazy" onerror="this.style.display='none'"></span></li>
+      <li>
+        <span class="skill-text">HTML/PHP</span>
+        <span class="skill-logos">
+          <img class="skill-logo" src="img/logo1.webp" alt="HTML logo" loading="lazy" onerror="this.style.display='none'">
+          <img class="skill-logo" src="img/logo2.webp" alt="PHP logo" loading="lazy" onerror="this.style.display='none'">
+        </span>
+        <span class="skill-stars" aria-hidden="true">
+          <span class="star-outside">★</span>
+          <span class="star-outside">★</span>
+          <span class="star-outside">★</span>
+        </span>
+      </li>
+      <li>
+        <span class="skill-text">CSS</span>
+        <span class="skill-logos">
+          <img class="skill-logo" src="img/logo3.webp" alt="CSS logo" loading="lazy" onerror="this.style.display='none'">
+        </span>
+        <span class="skill-stars" aria-hidden="true">
+          <span class="star-outside">★</span>
+          <span class="star-outside">★</span>
+          <span class="star-outside">★</span>
+        </span>
+      </li>
+      <li>
+        <span class="skill-text">JavaScript</span>
+        <span class="skill-logos">
+          <img class="skill-logo" src="img/logo4.webp" alt="JavaScript logo" loading="lazy" onerror="this.style.display='none'">
+        </span>
+        <span class="skill-stars" aria-hidden="true">
+          <span class="star-outside">★</span>
+          <span class="star-outside">★</span>
+        </span>
+      </li>
+      <li>
+        <span class="skill-text">Git</span>
+        <span class="skill-logos">
+          <img class="skill-logo" src="img/logo5.webp" alt="Git logo" loading="lazy" onerror="this.style.display='none'">
+        </span>
+        <span class="skill-stars" aria-hidden="true">
+          <span class="star-outside">★</span>
+          <span class="star-outside">★</span>
+          <span class="star-outside">★</span>
+        </span>
+      </li>
+      <li>
+        <span class="skill-text">Docker Desktop</span>
+        <span class="skill-logos">
+          <img class="skill-logo" src="img/logo6.webp" alt="Docker logo" loading="lazy" onerror="this.style.display='none'">
+        </span>
+        <span class="skill-stars" aria-hidden="true">
+          <span class="star-outside">★</span>
+          <span class="star-outside">★</span>
+        </span>
+      </li>
     </ul>
   </div>
  <img id="pfp" src="img/pfp.webp" alt="pfp">
