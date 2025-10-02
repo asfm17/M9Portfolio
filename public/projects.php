@@ -31,7 +31,7 @@
       <div class="blog-item">
         <div class="blog-title"><a href="project1.php">Scope Mania Webshop</a></div>
         <div class="blog-date">November 2024</div>
-        <img id="webshop1" class="pfp" src="img/webshop1.webp" alt="Webshop 1">
+        <img id="webshop1" class="pfp" src="/img/webshop1.webp" alt="Webshop 1">
         <div class="card-btns">
           <a class="github-btn" href="https://github.com/asfm17/BO-Webshop.git" target="_blank" rel="noopener">
             <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy" />
@@ -45,7 +45,7 @@
       <div class="blog-item">
         <div class="blog-title"><a href="#">Dot Collector Game</a></div>
         <div class="blog-date">June 2025</div>
-        <img class="pfp project-img" src="img/dotcollector.webp" alt="Dot Collector Game">
+        <img class="pfp project-img" src="/img/dotcollector.webp" alt="Dot Collector Game">
         <div class="card-btns">
           <a class="github-btn" href="https://github.com/asfm17/M8-JSGAME.git" target="_blank" rel="noopener">
             <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy" />
@@ -59,7 +59,7 @@
       <div class="blog-item">
         <div class="blog-title"><a href="#">My Portfolio</a></div>
         <div class="blog-date">October 2025</div>
-        <img class="pfp project-img" src="img/myportfolio.webp" alt="My Portfolio">
+        <img class="pfp project-img" src="/img/myportfolio.webp" alt="My Portfolio">
         <div class="card-btns">
           <a class="github-btn" href="https://github.com/asfm17/M9Portfolio.git" target="_blank" rel="noopener">
             <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy" />
