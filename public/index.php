@@ -102,9 +102,11 @@
           <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy" />
           Github
         </a>
-        <button class="site-btn">
-          Site <span class="arrow">→</span>
-        </button>
+        <a id="webshop-btn" href="/Demos/webshop/telescopes.html" target="_blank">
+        <button for="webshop-btn"class="site-btn">
+            <span for="webshop-btn" class="arrow">Site →</span>
+          </button>
+          </a>
       </div>
     </article>
     <article class="card">
@@ -116,9 +118,11 @@
           <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy" />
           Github
         </a>
-        <button class="site-btn">
-          Site <span class="arrow">→</span>
-        </button>
+        <a id="dotcollectorgame-btn" href="/Demos/dotcollectorgame/index.html" target="_blank">
+        <button for="dotcollector-btn"class="site-btn">
+            <span for="dotcollector-btn" class="arrow">Site →</span>
+          </button>
+          </a>
       </div>
     </article>
     <article class="card">

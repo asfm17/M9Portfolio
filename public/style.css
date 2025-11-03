@@ -568,16 +568,8 @@ h3{
   cursor: pointer;
   transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.18s;
   box-shadow: 0 2px 8px var(--elev);
-  text-decoration: none; /* remove underline */
-}
-
-/* Ensure all link states have no underline and keep color */
-.github-btn:link,
-.github-btn:visited,
-.github-btn:active,
-.github-btn:hover {
   text-decoration: none;
-  color: inherit;
+  color:#ffffff;
 }
 
 .github-btn:hover,
@@ -586,6 +578,7 @@ h3{
   color: var(--bg);
   border-color: var(--text);
   transform: scale(1.06);
+  color:#000000;
 }
 
 .github-logo {
@@ -598,7 +591,14 @@ h3{
 .site-btn {
   gap: 0.4rem;
 }
+.site-btn > a {
+    color: #ffffff;
+    text-decoration: none;
+}
 
+.site-btn:hover > a{
+    color:#000000;
+}
 .arrow {
   font-size: 1.2em;
   margin-left: 0.1em;
@@ -607,6 +607,16 @@ h3{
 
 .site-btn:hover .arrow {
   transform: translateX(4px);
+  text-decoration: none;
+  color:#000000;
+}
+
+#webshop-btn {
+    text-decoration:none;
+}
+
+#dotcollectorgame-btn {
+    text-decoration:none;
 }
 .github-btn:hover{
   background: var(--text);

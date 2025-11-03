@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <button class="lang-toggle" id="langToggle" aria-label="Toggle language">ENG</button>
@@ -37,10 +37,11 @@
             <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy" />
             Github
           </a>
-          <button id="webshopbutton" class="site-btn">
-            <a href="/Demos/webshop/">Site</a>
-            <span for="webshopbutton" class="arrow">→</span>
+           <a id="webshop-btn" href="/Demos/webshop/telescopes.html" target="_blank">
+        <button for="webshop-btn"class="site-btn">
+            <span for="webshop-btn" class="arrow">Site →</span>
           </button>
+          </a>
         </div>
       </div>
       <div class="blog-item">
@@ -52,9 +53,11 @@
             <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy" />
             Github
           </a>
-          <button class="site-btn">
-            Site <span class="arrow">→</span>
+          <a id="dotcollectorgame-btn" href="/Demos/dotcollectorgame/index.html" target="_blank">
+        <button for="dotcollector-btn"class="site-btn">
+            <span for="dotcollector-btn" class="arrow">Site →</span>
           </button>
+          </a>
         </div>
       </div>
       <div class="blog-item">
@@ -66,9 +69,6 @@
             <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy" />
             Github
           </a>
-          <button class="site-btn">
-            Site <span class="arrow">→</span>
-          </button>
         </div>
       </div>
     </div>
