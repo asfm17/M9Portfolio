@@ -37,8 +37,9 @@
             <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy" />
             Github
           </a>
-          <button class="site-btn">
-            Site <span class="arrow">→</span>
+          <button id="webshopbutton" class="site-btn">
+            <a href="/Demos/webshop/">Site</a>
+            <span for="webshopbutton" class="arrow">→</span>
           </button>
         </div>
       </div>

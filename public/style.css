@@ -568,6 +568,16 @@ h3{
   cursor: pointer;
   transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.18s;
   box-shadow: 0 2px 8px var(--elev);
+  text-decoration: none; /* remove underline */
+}
+
+/* Ensure all link states have no underline and keep color */
+.github-btn:link,
+.github-btn:visited,
+.github-btn:active,
+.github-btn:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 .github-btn:hover,
