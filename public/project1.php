@@ -13,8 +13,8 @@
   <div class="stars" aria-hidden>
     <?php
       for ($i = 0; $i < 10; $i++) {
-        $top = rand(5, 90);   // percent
-        $left = rand(5, 95);  // percent
+        $top = rand(5, 90);   
+        $left = rand(5, 95);  
         echo '<div class="star" style="top: ' . $top . '%; left: ' . $left . '%;"></div>';
       }
     ?>
@@ -27,6 +27,22 @@
     <a href="contact.php" >Contact</a>
   </nav>
   <main>
+    <div style="max-width: 40rem; margin: 0 auto; text-align: center;">
+      <h2>Scope Mania Webshop</h2>
+      <p style="color:var(--muted); margin-top:0.25rem;">November 2024</p>
+      <img src="img/webshop1.webp" alt="Scope Mania Webshop" style="width:100%;max-width:36rem;height:auto;border-radius:0.75rem;box-shadow:0 10px 28px var(--elev);margin:0.8rem 0;">
+      <p style="text-align:left;color:var(--text);line-height:1.5;">
+        Scope Mania Webshop — a demo ecommerce project built with PHP/HTML/CSS. Features product listing, cart and basic checkout UI.
+      </p>
+      <div class="card-btns" style="justify-content:center;margin-top:1rem;">
+        <a class="github-btn" href="https://github.com/asfm17/BO-Webshop.git" target="_blank" rel="noopener">
+          <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy" /> Github
+        </a>
+        <a class="site-btn" href="#" target="_blank" rel="noopener">
+          Site <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
   </main>
   <script>
     function randomizeStars() {

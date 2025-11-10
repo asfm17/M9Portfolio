@@ -1,4 +1,4 @@
-<?php // about.php ?>
+<?php  ?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -25,10 +25,21 @@
     <a href="contact.php" class="active">Contact</a>
   </nav>
   <main>
-    <h2>Contact</h2>
-    <h3>Email: 37931@ma-web.nl</h3>
-    <h3>Phone Number: 0653606330</h3>
-    <h3></h3>
+    
+    <div style="max-width: 32rem; margin: 0 auto; text-align:center;">
+      <h2 id="contact-title">Contact Me</h2>
+      <div class="contact-actions" style="margin-top:1rem;">
+        <a class="github-btn" href="mailto:37931@ma-web.nl" aria-label="Email me">
+          Email me
+        </a>
+        <a class="github-btn" href="https://github.com/asfm17" target="_blank" rel="noopener" aria-label="Github">
+          <img src="img/logo5.webp" alt="GitHub" class="github-logo" loading="lazy"> Github
+        </a>
+        <a class="github-btn" href="https://www.linkedin.com/in/akira-san-felipe-maestre-89666b398/?skipRedirect=true" target="_blank" rel="noopener" aria-label="LinkedIn">
+          LinkedIn
+        </a>
+      </div>
+    </div>
   </main>
   <script>
     function randomizeStars() {
@@ -37,11 +48,11 @@
         star.style.left = (Math.random() * 90 + 5) + '%';
       });
     }
-    // Listen for animation iteration
+    
     document.querySelectorAll('.star').forEach(function(star) {
       star.addEventListener('animationiteration', randomizeStars);
     });
-    // Initial randomization (optional, if you want to override PHP)
+    
     randomizeStars();
   </script>
   <script>

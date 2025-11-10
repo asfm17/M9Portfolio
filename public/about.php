@@ -1,4 +1,4 @@
-<?php // about.php ?>
+<?php ?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -27,9 +27,13 @@
     <a href="contact.php">Contact</a>
   </nav>
   <main>
-    <h2>About Me</h2>
-    <h3 id="name">Name: Akira San Felipe Maestre</h3>
-    <h3 id="date">Date of Birth: 22-08-2006</h3>
+    <h2 id="about-title">About Me</h2>
+    <h3 id="about-name">Hallo, mijn naam is Akira en ik ben 19 jaar oud. 
+      Ik doe de opleiding Software Development op het MediaCollege in Amsterdam.\
+      Ik ben vooral goed in front -end development, maar ik wil graag meer leren over back-end. 
+      Mijn hobby's zijn: naar raves gaan, gym en ik heb ook een telescoop! 
+      Ik ben een goeie samenwerker en kom vaak met creatieve ideeën.
+      Als u contact met mij wilt opnemen, kunt u dat doen door naar mijn Contact pagina te gaan.</h3>
   </main>
   <script>
     function randomizeStars() {
@@ -38,11 +42,11 @@
         star.style.left = (Math.random() * 90 + 5) + '%';
       });
     }
-    // Listen for animation iteration
+  
     document.querySelectorAll('.star').forEach(function(star) {
       star.addEventListener('animationiteration', randomizeStars);
     });
-    // Initial randomization (optional, if you want to override PHP)
+    
     randomizeStars();
   </script>
   <script>
@@ -65,21 +69,36 @@
         });
       }
       const dict = {
-        en: { 'nav.home':'Home','nav.projects':'Projects','nav.cv':'CV','nav.about':'About Me','nav.contact':'Contact','page.title':'About Me', 'name':'Name: Akira San Felipe Maestre','date':'Date of Birth: 22-08-2006' },
-        nl: { 'nav.home':'Home','nav.projects':'Projecten','nav.cv':'CV','nav.about':'Over mij','nav.contact':'Contact','page.title':'Over mij','name':'Naam: Akira San Felipe Maestre','date':'Geboortedatum: 22-08-2006' },
+        en: {
+          'nav.home':'Home','nav.projects':'Projects','nav.cv':'CV','nav.about':'About Me','nav.contact':'Contact',
+          'about.title':'About Me',
+          'about.name':'Hello, my name is Akira and I am 19 years old. I am studying Software Development at MediaCollege in Amsterdam. I am especially good at front-end development, but I would like to learn more about back-end. My hobbies are going to raves, working out at the gym, and I also have a telescope! I am a good team player and often come up with creative ideas. If you would like to get in touch with me, you can do so by visiting my Contact page.',
+        },
+        nl: {
+          'nav.home':'Home','nav.projects':'Projecten','nav.cv':'CV','nav.about':'Over mij','nav.contact':'Contact',
+          'about.title':'Over mij',
+          'about.name':'Hallo, mijn naam is Akira en ik ben 19 jaar oud. Ik doe de opleiding Software Development op het MediaCollege in Amsterdam. Ik ben vooral goed in front -end development, maar ik wil graag meer leren over back-end. Mijn hobbys zijn: naar raves gaan, gym en ik heb ook een telescoop! Ik ben een goeie samenwerker en kom vaak met creatieve ideeën. Als u contact met mij wilt opnemen, kunt u dat doen door naar mijn Contact pagina te gaan.',
+        }
       };
-      function applyLang(lang){
+
+      function applyLang(lang) {
         const t = dict[lang]; if(!t) return;
         const navLinks = document.querySelectorAll('nav a');
         navLinks[0] && (navLinks[0].textContent = t['nav.home']);
-        navLinks[1] && (navLinks[1].textContent = t['nav.projects']); 
+        navLinks[1] && (navLinks[1].textContent = t['nav.projects']);
         navLinks[2] && (navLinks[2].textContent = t['nav.cv']);
         navLinks[3] && (navLinks[3].textContent = t['nav.about']);
         navLinks[4] && (navLinks[4].textContent = t['nav.contact']);
-        const h2 = document.querySelector('main h2'); if(h2) h2.textContent = t['page.title'];
-        const name = document.querySelector('#name'); if(name) name.textContent = t['name'];
-        const date = document.querySelector('#date'); if(date) date.textContent = t['date'];
+
+      
+        const title = document.getElementById('about-title');
+        const name = document.getElementById('about-name');
+        const date = document.getElementById('about-date');
+        if (title) title.textContent = t['about.title'];
+        if (name) name.textContent = t['about.name'];
+        if (date) date.textContent = t['about.date'];
       }
+
       const savedLang = localStorage.getItem('lang') || 'en';
       applyLang(savedLang);
       if (langBtn) {

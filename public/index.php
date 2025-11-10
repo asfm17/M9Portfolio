@@ -13,8 +13,8 @@
   <div class="stars" aria-hidden>
     <?php
       for ($i = 0; $i < 10; $i++) {
-        $top = rand(5, 90);   // percent
-        $left = rand(5, 95);  // percent
+        $top = rand(5, 90);   
+        $left = rand(5, 95);  
         echo '<div class="star" style="top: ' . $top . '%; left: ' . $left . '%;"></div>';
       }
     ?>
@@ -90,7 +90,6 @@
   </div>
  <img id="pfp" src="img/pfp.webp" alt="pfp">
   
-  <!-- Placeholder projects in 3-column grid -->
   <h2 class="projects-title">Top Projects</h2>
   <section class="projects-grid">
     <article class="card">
@@ -144,11 +143,11 @@
         star.style.left = (Math.random() * 90 + 5) + '%';
       });
     }
-    // Listen for animation iteration
+    
     document.querySelectorAll('.star').forEach(function(star) {
       star.addEventListener('animationiteration', randomizeStars);
     });
-    // Initial randomization (optional, if you want to override PHP)
+
     randomizeStars();
   </script>
   <script>
@@ -170,7 +169,6 @@
           setTimeout(() => btn.classList.remove('toggling'), 300);
         });
       }
-      // Language toggle
       const dict = {
         en: {
           'nav.home': 'Home',
@@ -200,27 +198,26 @@
       function applyLang(lang) {
         const t = dict[lang];
         if (!t) return;
-        // nav
         const navLinks = document.querySelectorAll('nav a');
         navLinks[0] && (navLinks[0].textContent = t['nav.home']);
         navLinks[1] && (navLinks[1].textContent = t['nav.projects']);
         navLinks[2] && (navLinks[2].textContent = t['nav.cv']);
         navLinks[3] && (navLinks[3].textContent = t['nav.about']);
         navLinks[4] && (navLinks[4].textContent = t['nav.contact']);
-        // skills title
+
         const skillsTitle = document.querySelector('.skills-title');
         if (skillsTitle) skillsTitle.textContent = t['skills.title'];
-        // projects title
+        
         const projectsTitle = document.querySelector('.projects-title');
         if (projectsTitle) projectsTitle.textContent = t['projects.title'];
-        // first card
+    
         const firstCard = document.querySelector('.projects-grid .card');
         if (firstCard) {
           const h3 = firstCard.querySelector('h3');
           const p = firstCard.querySelector('p');
           if (h3) h3.textContent = t['project1.title'];
         }
-        // other cards soon text
+        
       }
       const savedLang = localStorage.getItem('lang') || 'en';
       applyLang(savedLang);

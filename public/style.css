@@ -1,29 +1,23 @@
 :root {
-  --bg: #000000;
-  --text: #ffffff;
-  --card-bg: #000000;
-  --border: #ffffff;
-  --star-color: rgba(255, 255, 255, 0.692);
-  --star-shadow: rgb(255, 255, 255);
+  --bg: #1b1b1b;
+  --text: #e6e6e6;      
+  --card-bg: #2b2b2b;  
+  --border: #3a3a3a;    
   --muted: #9aa0a6;
-  --muted-strong: #c4c7c9;
-  --chip-dark: #0f0f10;
-  --chip-light: #f2f2f2;
-  --elev: rgba(255,255,255,0.08);
+  --elev: rgba(0,0,0,0.6);
+  --star-color: rgba(255,255,255,0.85);
+  --star-shadow: rgba(255,255,255,0.6);
 }
 
 [data-theme="light"] {
   --bg: #ffffff;
-  --text: #000000;
-  --card-bg: #ffffff;
-  --border: #000000;
-  --star-color: rgba(0,0,0,0.9);
-  --star-shadow: rgb(0, 0, 0);
-  --muted: #676b70;
-  --muted-strong: #2c2f33;
-  --chip-dark: #111111;
-  --chip-light: #ededed;
+  --text: #111111;
+  --card-bg: #f3f4f6;
+  --border: #e6e6e9;
+  --muted: #6b6f75;
   --elev: rgba(0,0,0,0.06);
+  --star-color: rgba(0,0,0,0.85);
+  --star-shadow: rgba(0,0,0,0.45);
 }
 
 body {
@@ -37,7 +31,7 @@ body {
   transition: background-color 300ms ease, color 300ms ease;
 }
 
-/* Reserve scrollbar space to prevent layout shift between pages */
+
 html { overflow-y: scroll; scrollbar-gutter: stable; }
 
 @keyframes gradientMove {
@@ -56,7 +50,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 0.62rem;
-  background: var(--bg);
+  background: var(--card-bg); 
   padding: 0.62rem 0;
   justify-content: center;
   width: 100%;
@@ -116,7 +110,7 @@ nav a:hover::after,
 nav a.active::after { transform: scaleX(1); }
 main {
   background-color: var(--card-bg);
-  border-color: var(--border);
+  border-color:#3a3a3a;
   border-width:0.2rem;
   border-style: solid;
   max-width: 40.62rem;
@@ -130,13 +124,48 @@ main {
   box-shadow: 0 10px 30px var(--elev);
 }
 
+
+main,
+.skillslist,
+.blog-item,
+.projects-grid .card {
+  background-color: #313131;        
+  box-shadow: 0 12px 30px rgba(0,0,0,0.55);
+  border-color:#3a3a3a;               
+  transition: background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+}
+
+
+.projects-grid .card:hover,
+.blog-item:hover,
+.skillslist:hover,
+main:hover {
+  box-shadow: 0 18px 44px rgba(0,0,0,0.6);
+  transform: translateY(-2px);
+}
+
+
+[data-theme="light"] main,
+[data-theme="light"] .skillslist,
+[data-theme="light"] .blog-item,
+[data-theme="light"] .projects-grid .card {
+  background-color: #dbdbdb;        
+  border: 0.2rem solid #838282;    
+  box-shadow: 20px 20px 28px rgba(0,0,0,0.06);
+  color: var(--text);
+}
+
+[data-theme="light"] .blog-list {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45) !important;
+}
+
 .nameandskills{
   color: var(--text);
   margin-left: 5rem;
   margin-top:5rem;
   display:flex;
-  gap:29.8rem;
-  font-size:2rem;
+  gap: 29.8rem;
+  font-size: 2rem;
 }
 
 .nameandskills p { font-weight: 700; }
@@ -148,11 +177,10 @@ main {
   max-width:18rem;
   max-height:19rem;
   border-radius:2rem;
-  border-color: var(--border);
   border-style:solid;
   border-width:0.2rem;
   margin: 1rem auto 0;
-  padding:2rem 3rem 2rem 2rem; /* extra right padding for outside logos */
+  padding:2rem 3rem 2rem 2rem; 
   font-size:2rem;
   position: relative;
   z-index: 10;
@@ -203,10 +231,9 @@ main {
   width: fit-content;
   transition: transform 180ms ease, background-color 220ms ease, color 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
   box-shadow: 0 6px 14px var(--elev);
-  overflow: visible; /* allow logo to sit outside chip */
+  overflow: visible;
 }
 
-/* Alternate chip styling for contrast per item */
 .skillslist li:nth-child(odd) {
   background: var(--text);
   color: var(--bg);
@@ -229,7 +256,7 @@ main {
 
 .skill-text {
   padding-right: 0.5rem;
-  color: inherit; /* Use normal text color */
+  color: inherit;
 }
 
 .skill-logos {
@@ -250,7 +277,6 @@ main {
   vertical-align: middle;
 }
 
-/* Stars outside, behind the logos but not inside the text */
 .skill-stars {
   display: flex;
   align-items: center;
@@ -264,20 +290,18 @@ main {
 
 .star-outside {
   font-size: 1.1rem;
-  color: #fff !important; /* Default: white stars */
+  color: #fff !important;
   opacity: 0.95;
   margin-right: 0.08em;
   text-shadow: 0 1px 2px rgba(0,0,0,0.12);
   user-select: none;
 }
 
-/* Make stars in skillslist black in light mode */
 [data-theme="light"] .skillslist .star-outside {
   color: #111 !important;
   opacity: 0.95;
 }
 
-/* Responsive: slightly smaller stars and better alignment on mobile */
 @media (max-width: 700px) {
   .star-outside {
     font-size: 1rem;
@@ -336,16 +360,16 @@ h3{
 .blog-item,
 .blog-title,
 .blog-date {
-  background-color: var(--card-bg);
+  background-color: #838282; 
   text-align: left;
   align-items: flex-start;
   justify-content: flex-start;
 }
 
 .blog-item {
-  border-bottom: 0.06rem solid #000000;
   padding: 2rem;
-  border-color: var(--border);
+  border-radius:1rem;
+  border-color:#e60000;
   transition: border-color 300ms ease, background-color 300ms ease, transform 200ms ease;
 }
 
@@ -386,11 +410,9 @@ h3{
   max-width: 100%;
   height: auto;
   border-radius:0.5rem;
-  box-shadow: 0 10px 28px var(--elev);
   transition: transform 220ms ease;
 }
 
-/* Projects grid on homepage */
 .projects-grid {
   max-width: 70rem;
   margin: 10rem auto 5rem;
@@ -402,7 +424,7 @@ h3{
 
 .projects-grid .card {
   background: var(--card-bg);
-  border: 0.2rem solid var(--border);
+  border-color:#3a3a3a;
   border-radius: 2rem;
   width: 18rem;
   height: 18rem;
@@ -469,8 +491,6 @@ h3{
   100% { opacity: 0; transform: translateX(-420px) translateY(420px) rotate(45deg); }
 }
 
-
-/* Theme toggle button */
 .theme-toggle {
   position: absolute;
   top: 0.9rem;
@@ -484,14 +504,12 @@ h3{
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
   outline: none;
-  padding: 0;
 }
 
-/* Language toggle next to theme toggle */
 .lang-toggle {
   position: absolute;
   top: 0.9rem;
-  right: 6.2rem; /* place left of theme toggle */
+  right: 6.2rem; 
   height: 2rem;
   min-width: 3rem;
   padding: 0 0.6rem;
@@ -514,6 +532,7 @@ h3{
   height: 1.4rem;
   background: var(--text);
   border-radius: 50%;
+  border-color:#838282;
   position: absolute;
   top: 50%;
   left: 0.25rem;
@@ -559,7 +578,7 @@ h3{
   padding: 0.5rem 1.2rem;
   min-width: 7.2rem;
   justify-content: center;
-  background: var(--bg);
+  background: transparent;
   color: var(--text);
   border: 0.12rem solid var(--border);
   border-radius: 1.2rem;
@@ -569,16 +588,21 @@ h3{
   transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.18s;
   box-shadow: 0 2px 8px var(--elev);
   text-decoration: none;
-  color:#ffffff;
 }
 
 .github-btn:hover,
 .site-btn:hover {
-  background: var(--text);
-  color: var(--bg);
-  border-color: var(--text);
+  background: transparent !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
   transform: scale(1.06);
-  color:#000000;
+  box-shadow: 0 2px 8px var(--elev);
+}
+
+/* Make site-btn links inherit color */
+.site-btn > a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .github-logo {
@@ -619,8 +643,6 @@ h3{
     text-decoration:none;
 }
 .github-btn:hover{
-  background: var(--text);
-  color: var(--bg);
   border-color: var(--text);
   transform: scale(1.06);
 }
@@ -633,9 +655,9 @@ h3{
 
 .site-btn:hover .arrow {
   transform: translateX(4px);
+  color:white;
 }
 
-/* Ensure all project images in blog-list have the same size as #webshop1 */
 .project-img,
 .blog-item .pfp:not(#pfp) {
   display: block;
@@ -647,4 +669,61 @@ h3{
   object-fit: cover;
   border-radius: 0.5rem;
   box-shadow: 0 10px 28px var(--elev);
+}
+
+.github-btn:hover,
+.site-btn:hover {
+  background: transparent !important;
+  color: var(--text) !important;
+  border-color: #838282 !important;
+  transform: scale(1.06);
+  box-shadow: 0 2px 8px var(--elev);
+}
+
+[data-theme="light"] .github-btn:hover,
+[data-theme="light"] .site-btn:hover {
+  background: transparent !important;
+  color: var(--text) !important;
+  border-color: #838282 !important;
+}
+
+[data-theme="light"] .github-btn:hover .github-logo,
+[data-theme="light"] .site-btn:hover .github-logo {
+  filter: none;
+  opacity: 1;
+}
+
+
+.contact-actions {
+  display: flex;
+  gap: 0.8rem;
+  border-color: #838282;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.contact-actions .github-btn {
+  min-width: 6.4rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.95rem;
+}
+
+
+[data-theme="light"] .github-btn:hover,
+[data-theme="light"] .site-btn:hover {
+  color: black !important;      
+  background: transparent !important;  
+  border-color: var(--border) !important;
+}
+
+[data-theme="light"] .github-btn:hover .github-logo,
+[data-theme="light"] .site-btn:hover .github-logo,
+[data-theme="light"] .github-btn:hover > a,
+[data-theme="light"] .site-btn:hover > a {
+  color: black !important;
+  filter: none !important;
+  opacity: 1 !important;
+  text-decoration: none !important;
 }

@@ -139,14 +139,14 @@
       };
       function applyLang(lang){
         const t = dict[lang]; if(!t) return;
-        // nav
+        
         const navLinks = document.querySelectorAll('nav a');
         navLinks[0] && (navLinks[0].textContent = t['nav.home']);
         navLinks[1] && (navLinks[1].textContent = t['nav.projects']);
         navLinks[2] && (navLinks[2].textContent = t['nav.cv']);
         navLinks[3] && (navLinks[3].textContent = t['nav.about']);
         navLinks[4] && (navLinks[4].textContent = t['nav.contact']);
-        // cv
+        
         document.getElementById('cv-title') && (document.getElementById('cv-title').textContent = t['cv.title']);
         document.getElementById('name') && (document.getElementById('name').textContent = t['cv.name']);
         document.getElementById('date') && (document.getElementById('date').textContent = t['cv.date']);

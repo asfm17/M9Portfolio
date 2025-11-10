@@ -13,8 +13,8 @@
   <div class="stars" aria-hidden>
     <?php
       for ($i = 0; $i < 10; $i++) {
-        $top = rand(5, 90);   // percent
-        $left = rand(5, 95);  // percent
+        $top = rand(5, 90);  
+        $left = rand(5, 95);  
         echo '<div class="star" style="top: ' . $top . '%; left: ' . $left . '%;"></div>';
       }
     ?>
